@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+
+
+
+
+
+
+
+	<div class="calculator">
+		<h1>Calculator</h1>
+
+		<form name="calculator">
+			<input name="display" placeholder="0" class="calResult">
+			<br>
+			
+			<!-- button -->
+			<div class="buttonCal">
+				<input type="button" value="7" class="buttonCount" onclick="document.calculator.display.value +='7'">
+				<input type="button" value="8" class="buttonCount" onclick="document.calculator.display.value +='8'">
+				<input type="button" value="9" class="buttonCount" onclick="document.calculator.display.value +='9'">
+				<input type="button" value="+" class="buttonCount" onclick="document.calculator.display.value +='+'">
+				<br>
+
+				<input type="button" value="4" class="buttonCount" onclick="document.calculator.display.value +='4'">
+				<input type="button" value="5" class="buttonCount" onclick="document.calculator.display.value +='5'">
+				<input type="button" value="6" class="buttonCount" onclick="document.calculator.display.value +='6'">
+				<input type="button" value="-" class="buttonCount" onclick="document.calculator.display.value +='-'">
+				<br>
+
+				<input type="button" value="1" class="buttonCount" onclick="document.calculator.display.value +='1'">
+				<input type="button" value="2" class="buttonCount" onclick="document.calculator.display.value +='2'">
+				<input type="button" value="3" class="buttonCount" onclick="document.calculator.display.value +='3'">
+				<input type="button" value="*" class="buttonCount" onclick="document.calculator.display.value +='*'">
+				<br>
+			</div> <!-- .buttonCal -->
+		</form>
+		
+		<br>
+	</div> <!-- #calculator -->
+
+	
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		
+		function resdate(){
+			document.resname.h1 = 5;
+		}
+
+	</script>
+
+<style type="text/css">
+	.calculator{
+		width: 260px;
+		border: 1px solid #000;
+		display: block;
+		margin: 0 auto;
+	}
+	.calResult{
+		width: 230px;
+		height: 45px;
+		padding: 5px 5px;
+		font-size: 20px;
+		text-align: right;
+		display: block;
+		margin: 0 auto;
+		border: 1px solid #000;
+	}
+	.buttonCount{
+		width: 40px;
+	    height: 40px;
+	    border: 1px solid #000;
+	    font-size: 16px;
+	    margin: 3px 2px;
+	}
+	.buttonCal{
+		text-align: center;
+	}
+</style>
+
+</body>
+</html>
