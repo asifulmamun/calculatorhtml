@@ -4,60 +4,63 @@
 	<title>Calculator</title>
 </head>
 <body>
-
-
-
-
-
-
-
 	<div class="calculator">
-		<h1>Calculator</h1>
-
+		<center><h1>Calculator</h1></center>
 		<form name="calculator">
 			<input name="display" placeholder="0" class="calResult">
-			<br>
-			
 			<!-- button -->
 			<div class="buttonCal">
-				<input type="button" value="7" class="buttonCount" onclick="document.calculator.display.value +='7'">
-				<input type="button" value="8" class="buttonCount" onclick="document.calculator.display.value +='8'">
-				<input type="button" value="9" class="buttonCount" onclick="document.calculator.display.value +='9'">
-				<input type="button" value="+" class="buttonCount" onclick="document.calculator.display.value +='+'">
 				<br>
-
-				<input type="button" value="4" class="buttonCount" onclick="document.calculator.display.value +='4'">
-				<input type="button" value="5" class="buttonCount" onclick="document.calculator.display.value +='5'">
-				<input type="button" value="6" class="buttonCount" onclick="document.calculator.display.value +='6'">
+				<input type="button" value="AC" class="buttonCount" onclick="clean()">
+				<input type="button" value="<" class="buttonCount" onclick="back()">
+				<input type="button" value="%" class="buttonCount" onclick="parcent(100)">
+				<input type="button" value="+" class="buttonCount" onclick="insert('+')">
+				<br>
+				<input type="button" value="7" class="buttonCount" onclick="insert(7)">
+				<input type="button" value="8" class="buttonCount" onclick="insert(8)">
+				<input type="button" value="9" class="buttonCount" onclick="insert(9)">
 				<input type="button" value="-" class="buttonCount" onclick="document.calculator.display.value +='-'">
 				<br>
-
-				<input type="button" value="1" class="buttonCount" onclick="document.calculator.display.value +='1'">
-				<input type="button" value="2" class="buttonCount" onclick="document.calculator.display.value +='2'">
-				<input type="button" value="3" class="buttonCount" onclick="document.calculator.display.value +='3'">
-				<input type="button" value="*" class="buttonCount" onclick="document.calculator.display.value +='*'">
+				<input type="button" value="4" class="buttonCount" onclick="insert(4)">
+				<input type="button" value="5" class="buttonCount" onclick="insert(5)">
+				<input type="button" value="6" class="buttonCount" onclick="insert(6)">
+				<input type="button" value="*" class="buttonCount" onclick="insert('*')">
+				<br>
+				<input type="button" value="1" class="buttonCount" onclick="insert(1)">
+				<input type="button" value="2" class="buttonCount" onclick="insert(2)">
+				<input type="button" value="3" class="buttonCount" onclick="insert(3)">
+				<input type="button" value="/" class="buttonCount" onclick="insert('/')">
+				<br>
+				<input type="button" value="." class="buttonCount" onclick="insert('.')">
+				<input type="button" value="0" class="buttonCount" onclick="insert(0)">
+				<input type="button" value="=" class="buttonCount equal" onclick="equal()">
 				<br>
 			</div> <!-- .buttonCal -->
 		</form>
-		
-		<br>
 	</div> <!-- #calculator -->
 
-	
-
-
-
-
-
-
-
-
 	<script type="text/javascript">
-		
-		function resdate(){
-			document.resname.h1 = 5;
+		// Get value from button
+		function insert(append){
+			document.calculator.display.value += append;
 		}
-
+		// Delete one by one
+		function back(){
+			var del = document.calculator.display.value;
+			document.calculator.display.value = del.substring(0,del.length-1);
+		}
+		// Delete all
+		function clean(){
+			document.calculator.display.value = "";
+		}
+		// Parcents equation
+		function parcent(per){
+			document.calculator.display.value = (eval(document.calculator.display.value)/100);
+		}
+		// Main equation
+		function equal(){
+			document.calculator.display.value = eval(document.calculator.display.value);
+		}
 	</script>
 
 <style type="text/css">
@@ -86,6 +89,9 @@
 	}
 	.buttonCal{
 		text-align: center;
+	}
+	.equal{
+		width: 88px;
 	}
 </style>
 
