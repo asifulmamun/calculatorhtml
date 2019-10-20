@@ -1,99 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Calculator</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Calculator @asifulmamun</title>
+
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="calculator">
+	<div id="mydiv" class="calculator">
+		<div id="mydivheader">
+			<div class="width90"></div>
+			<div class="width10"><div style="cursor:pointer;">X</div></div>
+		</div>
 		<center><h1>Calculator</h1></center>
 		<form name="calculator">
 			<input name="display" placeholder="0" class="calResult">
 			<!-- button -->
 			<div class="buttonCal">
 				<br>
-				<input type="button" value="AC" class="buttonCount" onclick="clean()">
-				<input type="button" value="<" class="buttonCount" onclick="back()">
-				<input type="button" value="%" class="buttonCount" onclick="parcent(100)">
-				<input type="button" value="+" class="buttonCount" onclick="insert('+')">
+				<input type="button" value="AC" class="buttonCount" onclick="clean(),clickSound()">
+				<input type="button" value="<" class="buttonCount" onclick="back(),clickSound()">
+				<input type="button" value="%" class="buttonCount" onclick="parcent(100),clickSound()">
+				<input type="button" value="+" class="buttonCount" onclick="insert('+'),clickSound()">
 				<br>
-				<input type="button" value="7" class="buttonCount" onclick="insert(7)">
-				<input type="button" value="8" class="buttonCount" onclick="insert(8)">
-				<input type="button" value="9" class="buttonCount" onclick="insert(9)">
-				<input type="button" value="-" class="buttonCount" onclick="document.calculator.display.value +='-'">
+				<input type="button" value="7" class="buttonCount" onclick="insert(7),clickSound()">
+				<input type="button" value="8" class="buttonCount" onclick="insert(8),clickSound()">
+				<input type="button" value="9" class="buttonCount" onclick="insert(9),clickSound()">
+				<input type="button" value="-" class="buttonCount" onclick="insert('-'),clickSound()">
 				<br>
-				<input type="button" value="4" class="buttonCount" onclick="insert(4)">
-				<input type="button" value="5" class="buttonCount" onclick="insert(5)">
-				<input type="button" value="6" class="buttonCount" onclick="insert(6)">
-				<input type="button" value="*" class="buttonCount" onclick="insert('*')">
+				<input type="button" value="4" class="buttonCount" onclick="insert(4),clickSound()">
+				<input type="button" value="5" class="buttonCount" onclick="insert(5),clickSound()">
+				<input type="button" value="6" class="buttonCount" onclick="insert(6),clickSound()">
+				<input type="button" value="*" class="buttonCount" onclick="insert('*'),clickSound()">
 				<br>
-				<input type="button" value="1" class="buttonCount" onclick="insert(1)">
-				<input type="button" value="2" class="buttonCount" onclick="insert(2)">
-				<input type="button" value="3" class="buttonCount" onclick="insert(3)">
-				<input type="button" value="/" class="buttonCount" onclick="insert('/')">
+				<input type="button" value="1" class="buttonCount" onclick="insert(1),clickSound()">
+				<input type="button" value="2" class="buttonCount" onclick="insert(2),clickSound()">
+				<input type="button" value="3" class="buttonCount" onclick="insert(3),clickSound()">
+				<input type="button" value="/" class="buttonCount" onclick="insert('/'),clickSound()">
 				<br>
-				<input type="button" value="." class="buttonCount" onclick="insert('.')">
-				<input type="button" value="0" class="buttonCount" onclick="insert(0)">
-				<input type="button" value="=" class="buttonCount equal" onclick="equal()">
+				<input type="button" value="." class="buttonCount" onclick="insert('.'),clickSound()">
+				<input type="button" value="0" class="buttonCount" onclick="insert(0),clickSound()">
+				<input type="button" value="=" class="buttonCount equal" onclick="equal(),clickSound()">
 				<br>
 			</div> <!-- .buttonCal -->
 		</form>
 	</div> <!-- #calculator -->
 
-	<script type="text/javascript">
-		// Get value from button
-		function insert(append){
-			document.calculator.display.value += append;
-		}
-		// Delete one by one
-		function back(){
-			var del = document.calculator.display.value;
-			document.calculator.display.value = del.substring(0,del.length-1);
-		}
-		// Delete all
-		function clean(){
-			document.calculator.display.value = "";
-		}
-		// Parcents equation
-		function parcent(per){
-			document.calculator.display.value = (eval(document.calculator.display.value)/100);
-		}
-		// Main equation
-		function equal(){
-			document.calculator.display.value = eval(document.calculator.display.value);
-		}
-	</script>
 
-<style type="text/css">
-	.calculator{
-		width: 260px;
-		border: 1px solid #000;
-		display: block;
-		margin: 0 auto;
-	}
-	.calResult{
-		width: 230px;
-		height: 45px;
-		padding: 5px 5px;
-		font-size: 20px;
-		text-align: right;
-		display: block;
-		margin: 0 auto;
-		border: 1px solid #000;
-	}
-	.buttonCount{
-		width: 40px;
-	    height: 40px;
-	    border: 1px solid #000;
-	    font-size: 16px;
-	    margin: 3px 2px;
-	}
-	.buttonCal{
-		text-align: center;
-	}
-	.equal{
-		width: 88px;
-	}
-</style>
+	<div><button onclick="welcome()">About</button></div>
 
+	<audio id="clickSound">
+		<source src="media/click.mp3">
+	</audio>
+	<audio id="welcome">
+		<source src="media/welcome.mp3">
+	</audio>
+	<!-- theme js -->
+	<script type="text/javascript" src="js/theme.js"></script>
 </body>
 </html>
