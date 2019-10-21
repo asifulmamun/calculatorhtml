@@ -4,25 +4,30 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="media/fav-asifulmamun.png" type="image/png" sizes="16x16">
 	<title>Calculator @asifulmamun</title>
 
 	<!-- main css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body onload="welcome()">
+
+	<div id="notice"></div>
+
 	<div id="mydiv" class="calculator">
 		<div id="mydivheader">
-			<div class="width90"></div>
-			<div class="width10"><div style="cursor:pointer;">X</div></div>
+			<div class="width90">
+				<span title="Drag to for move">Calculator</span>
+			</div>
+			<div class="width10"><div onclick="clean(),deleteSound()" style="cursor:pointer;">X</div></div>
 		</div>
-		<center><h1>Calculator</h1></center>
 		<form name="calculator">
 			<input name="display" placeholder="0" class="calResult">
 			<!-- button -->
 			<div class="buttonCal">
 				<br>
-				<input type="button" value="AC" class="buttonCount" onclick="clean(),clickSound()">
-				<input type="button" value="<" class="buttonCount" onclick="back(),clickSound()">
+				<input type="button" value="AC" class="buttonCount" onclick="clean(),deleteSound()">
+				<input type="button" value="<" class="buttonCount" onclick="back(),backSound()">
 				<input type="button" value="%" class="buttonCount" onclick="parcent(100),clickSound()">
 				<input type="button" value="+" class="buttonCount" onclick="insert('+'),clickSound()">
 				<br>
@@ -43,17 +48,27 @@
 				<br>
 				<input type="button" value="." class="buttonCount" onclick="insert('.'),clickSound()">
 				<input type="button" value="0" class="buttonCount" onclick="insert(0),clickSound()">
-				<input type="button" value="=" class="buttonCount equal" onclick="equal(),clickSound()">
+				<input type="button" value="=" class="buttonCount equal" onclick="equal(),equalSound()">
 				<br>
 			</div> <!-- .buttonCal -->
 		</form>
 	</div> <!-- #calculator -->
 
 
-	<div><button onclick="welcome()">About</button></div>
+	<button class="aboutButton" onclick="welcome()">About</button>
+	<iframe class="iframe" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FasifulmamunPage&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 
 	<audio id="clickSound">
 		<source src="media/click.mp3">
+	</audio>
+	<audio id="backSound">
+		<source src="media/back.mp3">
+	</audio>
+	<audio id="deleteSound">
+		<source src="media/delete.mp3">
+	</audio>
+	<audio id="equalSound">
+		<source src="media/equal.mp3">
 	</audio>
 	<audio id="welcome">
 		<source src="media/welcome.mp3">

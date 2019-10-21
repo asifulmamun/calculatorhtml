@@ -73,6 +73,18 @@ function dragElement(elmnt) {
 function clickSound() { 
   document.getElementById("clickSound").play(); 
 }
+function backSound() { 
+  document.getElementById("backSound").play(); 
+}
+function deleteSound() { 
+  document.getElementById("deleteSound").play(); 
+}
+function equalSound() { 
+  document.getElementById("equalSound").play(); 
+}
 function welcome(){
   document.getElementById("welcome").play();
+}
+function welcomeStop(){
+  document.getElementById("welcome").puse();
 }
