@@ -1,157 +1,169 @@
 /* Global Css*/
-*{
-	margin: 0px;
-	padding: 0px;
-}
-body{
-	width: 100%;
-	min-height: 100vh;
-	position: relative;
-	overflow: hidden;
-	-webkit-animation: bodyAnimation 10s infinite;
-    animation: bodyAnimation 10s infinite;
-}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes bodyAnimation {
-	0% {
-		background: url("https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg") no-repeat;
-		background-color: #000;
-		background-size: auto 100%;
-		background-position: center center;
-	}
-  	100% {
-  		background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg") no-repeat;
-  		background-color: #000;
-		background-size: auto 100%;
-		background-position: center center;
-  	} 
-}
-@keyframes bodyAnimation {
-	0% {
-		background: url("https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg") no-repeat;
-		background-color: #000;
-		background-size: auto 100%;
-		background-position: center center;
-	}
-  	100% {
-  		background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg") no-repeat;
-  		background-color: #000;
-		background-size: auto 100%;
-		background-position: center center;
-  	}
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: bodyAnimation 10s infinite;
+  animation: bodyAnimation 10s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes bodyAnimation {
+  0% {
+    background: url("https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg") no-repeat;
+    background-color: #000;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  100% {
+    background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg") no-repeat;
+    background-color: #000;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+}
+@keyframes bodyAnimation {
+  0% {
+    background: url("https://images.pexels.com/photos/2031726/pexels-photo-2031726.jpeg") no-repeat;
+    background-color: #000;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  100% {
+    background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg") no-repeat;
+    background-color: #000;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+}
 /* Calculator Main*/
-.calculator{
-	width: 260px;
-    border: 1px solid #67d0572b;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 10px 0px;
-    box-shadow: 2px 7px 21px #000;
-    border-radius: 5px;
-    background: #000000ed;
+.calculator {
+  width: 260px;
+  border: 1px solid #67d0572b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 0px;
+  box-shadow: 2px 7px 21px #000;
+  border-radius: 5px;
+  background: #000000ed;
 }
-.calResult{
-	width: 230px;
-    height: 45px;
-    padding: 5px 5px;
-    font-size: 18px;
-    text-align: right;
-    display: block;
-    margin: 0 auto;
-    border: 1px solid #008000bd;
-    background: transparent;
-    border-radius: 5px;
-    color: #16ec16;
-    letter-spacing: 2px;
-    font-weight: normal;
+
+.calResult {
+  width: 230px;
+  height: 45px;
+  padding: 5px 5px;
+  font-size: 18px;
+  text-align: right;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #008000bd;
+  background: transparent;
+  border-radius: 5px;
+  color: #16ec16;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
-.buttonCount{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #0080009e;
-    font-size: 16px;
-    margin: 3px 2px;
-    border-radius: 4px;
-    background: transparent;
-    color: #06f906a3;
-    font-weight: 100;
-    cursor: pointer !important;
-    transition: 0.3s ease;
+
+.buttonCount {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0080009e;
+  font-size: 16px;
+  margin: 3px 2px;
+  border-radius: 4px;
+  background: transparent;
+  color: #06f906a3;
+  font-weight: 100;
+  cursor: pointer !important;
+  transition: 0.3s ease;
 }
-.buttonCount:hover{
-	background: green;
-    color: #fff;
+
+.buttonCount:hover {
+  background: green;
+  color: #fff;
 }
-.buttonCal{
-	text-align: center;
+
+.buttonCal {
+  text-align: center;
 }
-.equal{
-	width: 88px;
+
+.equal {
+  width: 88px;
 }
 
 /* style for calculator box header */
-#mydivheader{
-	width: 100%;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    height: 25px;
-    color: #fff;
-    padding: 10px 0px;
-    font-family: arial;
-    font-weight: bold;
-    cursor: move;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    border: none;
-    -webkit-animation: calculatorAnimationStyle 2s infinite;
-    animation: calculatorAnimationStyle 2s infinite;
+#mydivheader {
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 25px;
+  color: #fff;
+  padding: 10px 0px;
+  font-family: arial;
+  font-weight: bold;
+  cursor: move;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  border: none;
+  -webkit-animation: calculatorAnimationStyle 2s infinite;
+  animation: calculatorAnimationStyle 2s infinite;
 }
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes calculatorAnimationStyle {
-	0% {
-		background: linear-gradient(to left, #ff00006b, #00800052);
-	}
-  	100% {
-  		background: linear-gradient(to left, #00800052, #ff00006b);
-  	} 
+  0% {
+    background: linear-gradient(to left, #ff00006b, #00800052);
+  }
+  100% {
+    background: linear-gradient(to left, #00800052, #ff00006b);
+  }
 }
 @keyframes calculatorAnimationStyle {
-	0% {
-		background: linear-gradient(to left, #ff00006b, #00800052);
-	}
-  	100% {
-  		background: linear-gradient(to left, #00800052, #ff00006b);
-  	} 
+  0% {
+    background: linear-gradient(to left, #ff00006b, #00800052);
+  }
+  100% {
+    background: linear-gradient(to left, #00800052, #ff00006b);
+  }
 }
-.width90{
-    width: 90%;
-    float: left;
-    text-align: center;
-    font-size: 20px;
-    font-family: Aril
+.width90 {
+  width: 90%;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  font-family: Aril;
 }
-.width10{
-	width: 10%;
-	float: right;
+
+.width10 {
+  width: 10%;
+  float: right;
 }
-.aboutButton{
-	text-align: center;
-    display: block;
-    margin: 30px 50px 0 auto;
-    padding: 4px 10px;
-    font-size: 18px;
-    background: transparent;
-    color: green;
-    border: 0.5px solid green;
-    border-radius: 3px;
-    cursor: pointer;
+
+.aboutButton {
+  text-align: center;
+  display: block;
+  margin: 30px 50px 0 auto;
+  padding: 4px 10px;
+  font-size: 18px;
+  background: transparent;
+  color: green;
+  border: 0.5px solid green;
+  border-radius: 3px;
+  cursor: pointer;
 }
+
 /* Facebook */
-.iframe{
-	margin: 30px 0 0px 30px;
+.iframe {
+  margin: 30px 0 0px 30px;
 }
+
+/*# sourceMappingURL=style.css.map */
